@@ -129,4 +129,4 @@ def reportLambdaError(error):
                 "channel": lambdaErrorChannel,
                 "text": reportText
             }
-    requests.post(slackUrlEndpoint, json=finalPostParams, headers=headers)
+    requests.post(slackUrlEndpoint, json=finalPostParams, headers=headers, timeout=60)
